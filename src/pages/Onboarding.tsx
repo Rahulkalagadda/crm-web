@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 export const Onboarding: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen flex items-stretch bg-background w-full">
       {/* Left Side: Visual/Branding */}
@@ -160,10 +163,10 @@ export const Onboarding: React.FC = () => {
                 Back
               </button>
               <div className="flex gap-md">
-                <button className="px-lg py-md text-on-surface-variant hover:text-on-surface font-button transition-colors">
+                <button onClick={() => navigate('/workspace-overview')} className="px-lg py-md text-on-surface-variant hover:text-on-surface font-button transition-colors">
                   Skip for now
                 </button>
-                <button className="bg-primary-container text-white px-xl py-md rounded-lg font-button shadow-lg shadow-primary-container/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
+                <button onClick={() => navigate('/workspace-overview')} className="bg-primary-container text-white px-xl py-md rounded-lg font-button shadow-lg shadow-primary-container/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
                   Continue to Team Setup
                 </button>
               </div>

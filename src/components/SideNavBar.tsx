@@ -67,7 +67,7 @@ export const SideNavBar: React.FC = () => {
           Help Center
         </NavLink>
         <NavLink
-          to="/logout"
+          to="/"
           className="flex items-center gap-3 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 px-4 py-2 rounded-lg text-xs font-semibold transition-colors"
         >
           <span className="material-symbols-outlined text-base">logout</span>

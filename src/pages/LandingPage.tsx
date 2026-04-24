@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 export const LandingPage: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="pt-24 pb-20 px-6 lg:px-12 max-w-7xl mx-auto w-full">
       {/* Hero Section */}
@@ -40,7 +43,7 @@ export const LandingPage: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
         >
-          <button className="px-8 py-4 bg-primary text-on-primary rounded-xl font-button text-button text-lg shadow-xl shadow-indigo-500/30 hover:translate-y-[2px] transition-all">Start Free Trial</button>
+          <button onClick={() => navigate('/auth')} className="px-8 py-4 bg-primary text-on-primary rounded-xl font-button text-button text-lg shadow-xl shadow-indigo-500/30 hover:translate-y-[2px] transition-all">Start Free Trial</button>
           <button className="px-8 py-4 bg-white border border-outline-variant rounded-xl font-button text-button text-lg flex items-center gap-2 hover:bg-gray-50 transition-all">
             <span className="material-symbols-outlined">play_circle</span>
             Watch Demo
@@ -179,7 +182,7 @@ export const LandingPage: React.FC = () => {
             <h2 className="font-h1 text-white text-4xl md:text-6xl mb-8 tracking-tight">Ready to transform your business?</h2>
             <p className="text-indigo-100 font-body-lg text-lg mb-12 max-w-2xl mx-auto">Join over 10,000 top-performing agents using EstateFlow to drive results every day.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-indigo-600 rounded-xl font-bold hover:scale-105 transition-transform">Get Started Now</button>
+              <button onClick={() => navigate('/auth')} className="px-8 py-4 bg-white text-indigo-600 rounded-xl font-bold hover:scale-105 transition-transform">Get Started Now</button>
               <button className="px-8 py-4 bg-transparent border border-white/30 text-white rounded-xl font-bold hover:bg-white/10 transition-all">Schedule Demo</button>
             </div>
           </div>

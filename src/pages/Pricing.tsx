@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 export const Pricing: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="pt-24 pb-20 px-6 lg:px-12 max-w-7xl mx-auto w-full">
       {/* Hero Section */}
@@ -73,7 +76,7 @@ export const Pricing: React.FC = () => {
               Advanced Analytics
             </li>
           </ul>
-          <button className="w-full py-3 border border-outline text-on-surface font-button text-button rounded-xl hover:bg-surface-container-high transition-colors">Start for Free</button>
+          <button onClick={() => navigate('/auth')} className="w-full py-3 border border-outline text-on-surface font-button text-button rounded-xl hover:bg-surface-container-high transition-colors">Start for Free</button>
         </motion.div>
 
         {/* Pro Plan (Recommended) */}
@@ -117,6 +120,7 @@ export const Pricing: React.FC = () => {
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
+            onClick={() => navigate('/auth')}
             className="w-full py-3 bg-primary-container text-white font-button text-button rounded-xl shadow-lg shadow-indigo-500/25 transition-all"
           >
             Upgrade to Pro
